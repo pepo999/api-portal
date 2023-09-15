@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@200;600&display=swap');
+
+* {
+    /* border: solid 1px rebeccapurple; */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .75rem;
+    margin-top: 1rem;
+    padding: 6px;
+}
+
+.hide {
+    display: none;
+}
+
+header {
+    background-color: rgb(4, 16, 36, 1);
+    color: #fafafa;
+    padding: 12px;
+    padding-bottom: 0px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(210, 152, 27);
+    /* border-bottom: solid 2px rgb(4, 16, 36, 1); */
+}
+
+h1{
+    font-size: 64px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-shadow: .5px .5px 2px  rgb(210, 152, 27);
+}
+
+.top-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 12px;
+    padding-top: 0px;
+}
+
+.sub-header{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background-color: rgb(16, 37, 59);
+    height: 12vh;
+}
+
+span{
+    font-size: 20px;
+}
+
+#searchbar{
+    padding: 12px;
+}
+
+input{
+    background-color: #fafafa;
+    border-radius: 6px;
+    border: none;
+}
+
+button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	color: #fafafa;
+}
+
+main {
+    background: rgb(4, 16, 36, 1);
+    height: 70vh;
+    max-height: 75vh;
+    overflow: scroll;
+    padding: 0px;
+}
+
+.card{
+    border: solid 1px rgb(16, 37, 59);
+    border-radius: 6px;
+    padding: 12px;
+    color: #fafafa;
+    height: 250px;
+    background-color: rgb(16, 37, 59);
+}
+
+.description{
+    font-size: 16px;
+}
+
+.title{
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(210, 152, 27);
+}
