@@ -49,7 +49,6 @@ function displayData(data) {
         return 0;
       });
     container.innerHTML = ''
-    console.log(sortedData)
     for (let index = 0; index < sortedData.length; index++) {
         const element = sortedData[index];
         if (element.Auth === '') {
