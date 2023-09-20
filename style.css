@@ -17,7 +17,7 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: .75rem;
     margin-top: 1rem;
     padding: 6px;
@@ -63,7 +63,9 @@ h1{
     align-items: center;
     padding: 12px;
     background-color: rgb(16, 37, 59);
-    height: 12vh;
+    height: 18vh;
+    border-bottom: 3px solid  rgb(4, 16, 36, 1);
+    z-index: 1;
 }
 
 span{
@@ -93,13 +95,12 @@ button{
 main {
     background: rgb(4, 16, 36, 1);
     height: 70vh;
-    max-height: 75vh;
+    max-height: 70vh;
     overflow: scroll;
     padding: 0px;
 }
 
 .card{
-    border: solid 1px rgb(16, 37, 59);
     border-radius: 6px;
     padding: 12px;
     color: #fafafa;
@@ -108,11 +109,17 @@ main {
 }
 
 .description{
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .title{
     font-size: 18px;
+}
+
+.info{
+    padding-top: 9px;
+    font-size: 15px;
+    color: #fafafab7;
 }
 
 a{

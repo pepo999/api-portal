@@ -49,8 +49,12 @@ function displayData(data) {
         return 0;
       });
     container.innerHTML = ''
+    console.log(sortedData)
     for (let index = 0; index < sortedData.length; index++) {
         const element = sortedData[index];
+        if (element.Auth === '') {
+            element.Auth = 'None'
+        }
         const cardContainer = document.createElement('div') 
         cardContainer.className = 'card'
         const titleContainer = document.createElement('h4')
@@ -60,13 +64,18 @@ function displayData(data) {
         link.setAttribute('target', '_blank')
         const descriptionContainer = document.createElement('span')
         descriptionContainer.className = 'description'
+        const infoContainer = document.createElement('div')
+        infoContainer.className = 'info'
         const title = document.createTextNode(element.API)
         const description = document.createTextNode(element.Description)
+        const auth = document.createTextNode('Authorization: ' + element.Auth)
         titleContainer.appendChild(title)
         descriptionContainer.appendChild(description)
         link.appendChild(titleContainer)
+        infoContainer.appendChild(auth)
         cardContainer.appendChild(link)
         cardContainer.appendChild(descriptionContainer)
+        cardContainer.appendChild(infoContainer)
         container.appendChild(cardContainer)       
     }
 }
