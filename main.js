@@ -19,11 +19,11 @@ async function getAPIData() {
 function initialsFilter(button) {
     allBtns = document.querySelectorAll('button')
     allBtns.forEach(btn => {
-        btn.style.color = "#fafafa";
+        btn.style.color = "#f4e4b2c5";
     });
     const apiElements = document.querySelectorAll('.card');
     const value = button.getAttribute('value');
-    button.style = "color: rgb(210, 152, 27)"
+    button.style = "color: #DDB967"
     apiElements.forEach(api => {
         const apiTitle = api.querySelector('.title').textContent.toUpperCase();
         const inital = apiTitle[0]
@@ -35,7 +35,7 @@ function initialsFilter(button) {
 function displayData(data) {
     allBtns = document.querySelectorAll('button')
     allBtns.forEach(btn => {
-        btn.style.color = "#fafafa";
+        btn.style.color = "#F4E3B2";
     });
     let container = document.getElementById('container')
     const entries = data.entries
