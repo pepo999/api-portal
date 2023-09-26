@@ -52,30 +52,45 @@ function displayData(data) {
     for (let index = 0; index < sortedData.length; index++) {
         const element = sortedData[index];
         if (element.Auth === '') {
-            element.Auth = 'None'
+            element.Auth = 'None';
         }
-        const cardContainer = document.createElement('div') 
-        cardContainer.className = 'card'
-        const titleContainer = document.createElement('h4')
-        titleContainer.className = 'title'
-        const link = document.createElement('a')
-        link.setAttribute('href', element.Link) 
-        link.setAttribute('target', '_blank')
-        const descriptionContainer = document.createElement('span')
-        descriptionContainer.className = 'description'
-        const infoContainer = document.createElement('div')
-        infoContainer.className = 'info'
-        const title = document.createTextNode(element.API)
-        const description = document.createTextNode(element.Description)
-        const auth = document.createTextNode('Authorization: ' + element.Auth)
-        titleContainer.appendChild(title)
-        descriptionContainer.appendChild(description)
-        link.appendChild(titleContainer)
-        infoContainer.appendChild(auth)
-        cardContainer.appendChild(link)
-        cardContainer.appendChild(descriptionContainer)
-        cardContainer.appendChild(infoContainer)
-        container.appendChild(cardContainer)       
+
+        // Create a link element
+        const link = document.createElement('a');
+        link.setAttribute('href', element.Link);
+        link.setAttribute('target', '_blank');
+
+        // Create card container
+        const cardContainer = document.createElement('a'); // Wrap the card in an anchor element
+        cardContainer.className = 'card';
+        cardContainer.setAttribute('href', element.Link); // Set the href attribute of the card
+        cardContainer.setAttribute('target', '_blank')
+
+        // Create title element
+        const titleContainer = document.createElement('h2');
+        titleContainer.className = 'title';
+        const title = document.createTextNode(element.API);
+        titleContainer.appendChild(title);
+
+        // Create description element
+        const descriptionContainer = document.createElement('span');
+        descriptionContainer.className = 'description';
+        const description = document.createTextNode(element.Description);
+        descriptionContainer.appendChild(description);
+
+        // Create info element
+        const infoContainer = document.createElement('div');
+        infoContainer.className = 'info';
+        const auth = document.createTextNode('Authorization: ' + element.Auth);
+        infoContainer.appendChild(auth);
+
+        // Append title, description, and info to the card container (now an <a> element)
+        cardContainer.appendChild(titleContainer);
+        cardContainer.appendChild(descriptionContainer);
+        cardContainer.appendChild(infoContainer);
+
+        // Append the card container (an <a> element) to the container
+        container.appendChild(cardContainer);     
     }
 }
 
